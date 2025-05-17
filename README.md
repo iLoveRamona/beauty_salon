@@ -94,8 +94,8 @@ service (
 
 3 - окрашивание - 300р - 30 мин - 2
 
-```
 ## Order-service
+```
 order_service (
     id 
     order_id

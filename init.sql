@@ -4,7 +4,7 @@ CREATE TABLE users
     id INTEGER PRIMARY KEY DEFAULT nextval('user_id'),
     name CHARACTER VARYING(30),
     phone CHARACTER VARYING(12) UNIQUE,
-    password CHARACTER VARYING(30)
+    password CHARACTER VARYING(60)
 );
 -- 1 - Лилия Малышева - 8989898989 - pass
 -- 2 - Алина Малинина - 9898989898 - pass
@@ -82,6 +82,7 @@ CREATE TABLE receipt
 -- 1 - 1(Таня Лобова) - 11:15:00:20.05.2025 - 0
 -- 2 - 1(Таня Лобова) - 19:45:00-20.05.2025 - 1
 -- 3 - 2(Настя Змановская) - 18:00:00-22.05.2025 - 0
+
 CREATE TYPE appointment_status AS ENUM ('booked', 'completed', 'canceled_correctly', 'canceled_incorrectly');
 
 CREATE SEQUENCE IF NOT EXISTS receipt_service_id START WITH 1;
